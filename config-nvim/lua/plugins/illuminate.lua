@@ -1,0 +1,28 @@
+return {}
+-- return {
+--   {
+--     "RRethy/vim-illuminate",
+--     config = function()
+--       local illuminate = require("illuminate")
+--       illuminate.configure({
+--         providers = {
+--           "lsp",
+--           "treesitter",
+--           "regex",
+--         },
+--       })
+--       vim.keymap.set(
+--         "n",
+--         "[[",
+--         illuminate.goto_prev_reference,
+--         { desc = "Illuminate go to previous reference", noremap = true, silent = true }
+--       )
+--       vim.keymap.set(
+--         "n",
+--         "]]",
+--         illuminate.goto_next_reference,
+--         { desc = "Illuminate go to next reference", noremap = true, silent = true }
+--       )
+--     end,
+--   },
+-- }
