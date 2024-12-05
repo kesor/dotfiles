@@ -1,0 +1,62 @@
+XTerm.termName: xterm-256color
+
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+XTerm.vt100.utf8Title: true
+Xterm.vt100.saveLines: 4096
+XTerm.vt100.alternateScroll: true
+XTerm.vt100.fastScroll: true
+XTerm.vt100.scrollKey: true
+XTerm.vt100.scrollTtyOutput: false
+XTerm.vt100.bellIsUrgent: true
+XTerm.vt100.visualBell: true
+XTerm.vt100.visualBellLine: true
+XTerm.vt100.visualBellDelay: 20
+XTerm.vt100.metaSendsEscape: true
+
+XTerm.vt100.faceName: JetBrainsMono Nerd Font Mono:size=13:style=Regular
+XTerm.vt100.wideFont: JetBrainsMono Nerd Font Mono:size=13:style=Regular
+XTerm.vt100.boldFont: JetBrainsMono Nerd Font Mono:size=13:style=Bold
+XTerm.vt100.wideBoldFont: JetBrainsMono Nerd Font Mono:size=13:style=Bold
+XTerm.vt100.faceSize: 12
+xterm.vt100.faceSize1: 8
+xterm.vt100.faceSize2: 10
+xterm.vt100.faceSize3: 12
+xterm.vt100.faceSize4: 16
+xterm.vt100.faceSize5: 22
+XTerm.vt100.renderFont: true
+XTerm.vt100.cjkWidth: false
+XTerm.vt100.internalBorder: 0
+XTerm.borderWidth: 0
+
+! Only select text
+xterm*highlightSelection: true
+! Remove trailing spaces
+xterm*trimSelection: true
+
+XTerm.vt100.loginShell: true
+
+XTerm.vt100.foreground: white
+XTerm.vt100.background: black
+
+! keybind - font resize
+XTerm.vt100.Translations: #override \
+    Ctrl <Key> minus: smaller-vt-font() \n\
+    Ctrl <Key> plus: larger-vt-font() \n\
+    Ctrl <Key> 0: set-vt-font(d)
+
+! keybind - copy paste & url clicking
+XTerm*vt100.Translations: #override \
+    Shift <KeyPress> Insert: insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>C:    copy-selection(CLIPBOARD) \n\
+    Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
+
+
+! Xft.dpi:       120
+! Xft.antialias: true
+! Xft.hinting:   true
+! Xft.autohint:  false
+! Xft.hintstyle: hintslight
+! Xft.lcdfilter: lcddefault
+! Xft.rgba:      vrgb
